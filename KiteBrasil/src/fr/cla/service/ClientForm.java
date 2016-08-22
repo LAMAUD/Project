@@ -10,9 +10,7 @@ import fr.cla.validation.ClientValidation;
 
 public class ClientForm {
 
-    final String                ATT_BEAN_CLIENT = "client";
-    final String                ATT_ERROR       = "errors";
-    final String                ATT_RESULT      = "resultat";
+
 
     private Map<String, String> errors          = new HashMap<String, String>();
     private String              resultat;

@@ -22,7 +22,7 @@ public class ControllerClient extends HttpServlet {
 	final String VUE_ERROR = "/WEB-INF/client.jsp";
 	final String VUE = "/WEB-INF/recapClient.jsp";
 	final String ATT_BEAN_CLIENT = "client";
-	final String ATT_BEAN_FORM = "form";
+	final String ATT_BEAN_FORM_CLIENT = "formClient";
 
 	Map<String, String> errors = new HashMap<String, String>();
 	String resultat;
@@ -34,7 +34,7 @@ public class ControllerClient extends HttpServlet {
 		Client client = form.clientSaving(request);
 
 		request.setAttribute(ATT_BEAN_CLIENT, client);
-		request.setAttribute(ATT_BEAN_FORM, form);
+		request.setAttribute(ATT_BEAN_FORM_CLIENT, form);
 
 		if (form.getErrors().isEmpty()) {
 			this.getServletContext().getRequestDispatcher(VUE).forward(request, response);

@@ -15,7 +15,7 @@ public class CommandeValidation {
 	}
 
 	public static void statutPaiement(String statutPaiement) throws Exception {
-//		ConstraintOnEmptyField( statutPaiement );
+
 	}
 
 	public static void modeLivraison(String modeLivraison) throws Exception {
@@ -23,7 +23,7 @@ public class CommandeValidation {
 	}
 
 	public static void statutLivraison(String statutLivraison) throws Exception {
-//		ConstraintOnEmptyField( statutLivraison );
+
 	}
 
 	private static void ConstraintOnEmptyField( String valeur ) throws Exception {

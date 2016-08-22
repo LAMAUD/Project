@@ -10,7 +10,7 @@
     
     <c:import url="/inc/template/templateMenu.jsp"/>
         <div>
-            <form method="get" action="creationCommande">
+            <form method="post" action="creationCommande">
             
                 <c:import url="/inc/template/templateCreateClient.jsp"/>
                 <c:import url="/inc/template/templateInitOrder.jsp"/>

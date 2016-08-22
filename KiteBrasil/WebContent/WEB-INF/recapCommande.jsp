@@ -11,33 +11,26 @@
 
 	<c:import url="/inc/template/templateMenu.jsp" />
 
-	<c:choose>
-		<c:when test="${!error}">
+	
 			
 				Mr
-				<c:out value="${commande.getClient().getNom()}" />
+				<c:out value="${order.getClient().getNom()}" />
 				a commandé :
 			<ul>
 				<li>Date de Commande <c:out
-						value=" ${commande.getCommandDate()}" /></li>
+						value=" ${order.getCommandDate()}" /></li>
 				<li>Montant de la commande : <c:out
-						value="${commande.getMontant()}" /></li>
+						value="${order.getMontant()}" /></li>
 				<li>Mode de paiement : <c:out
-						value="${commande.getModePaiement()}" /></li>
+						value="${order.getModePaiement()}" /></li>
 				<li>Statut Paiement : <c:out
-						value="${commande.getStatutPaiement()}" /></li>
+						value="${order.getStatutPaiement()}" /></li>
 				<li>Mode de livraison : <c:out
-						value="${commande.getModeLivraison()}" /></li>
+						value="${order.getModeLivraison()}" /></li>
 				<li>Statut de livraison : <c:out
-						value="${commande.getStatutLivraison()}" /></li>
+						value="${order.getStatutLivraison()}" /></li>
 			</ul>
 
-
-		</c:when>
-		<c:otherwise>
-			<div class="error">Erreur dans la saisie des données</div>
-		</c:otherwise>
-	</c:choose>
 
 </body>
 </html>
