@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>KiteBrasil</display-name>
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
+
+	<servlet>
+		<servlet-name>ControllerClient</servlet-name>
+		<servlet-class>fr.cla.servlets.ControllerClient</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ControllerClient</servlet-name>
+		<url-pattern>/creationClient</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ControllerCommande</servlet-name>
+		<servlet-class>fr.cla.servlets.ControllerCommande</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ControllerCommande</servlet-name>
+		<url-pattern>/creationCommande</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Controller</servlet-name>
+		<servlet-class>fr.cla.servlets.Controller</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Controller</servlet-name>
+		<url-pattern>/toto</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ControllerHome</servlet-name>
+		<servlet-class>fr.cla.servlets.ControllerHome</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ControllerHome</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+
+
+</web-app>
