@@ -11,13 +11,13 @@
 
 	<c:import url="/inc/template/templateMenu.jsp" />
 
-	
+<div class = "recapOrder">
 			
-				Mr
+			<p>	Mr
 				<c:out value="${order.getClient().getNom()}" />
-				a commandé :
+				a commandé : </p>
 			<ul>
-				<li><label>Date de Commande </label> <span><c:out
+				<li><label>Date de Commande </label> :  <span><c:out
 						value=" ${order.getCommandDate()}" /></span></li>
 				<li><label>Montant de la commande</label> : <span><c:out
 						value="${order.getMontant()}" /></span></li>
@@ -30,7 +30,7 @@
 				<li><label>Statut de livraison</label> : <span><c:out
 						value="${order.getStatutLivraison()}" /></span></li>
 			</ul>
-
+</div>
 
 </body>
 </html>

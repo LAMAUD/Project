@@ -73,3 +73,34 @@ a {
 }
 
 /* ----------------------------------------------------------------------------------------------------*/
+
+
+ul li label, ul li span {
+    display: inline-block;
+    width: 30%;
+}
+
+ul li span {
+    margin-left: 100px;
+    background-color: aliceblue;
+    padding-left: 70px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    height: 16px;
+}
+
+ul li {
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+
+.recapOrder {
+    background-color: rgb(204,197,185);
+    padding: 30px;
+    margin-bottom: 15px;
+}
+
+.recapOrder p {
+    margin-bottom: 50px;
+    font-size: xx-large;
+}
