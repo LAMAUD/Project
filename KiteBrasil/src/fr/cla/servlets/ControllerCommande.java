@@ -19,9 +19,9 @@ public class ControllerCommande extends HttpServlet {
     /**
 	 * 
 	 */
-	final String VUE_ERROR = "/WEB-INF/commande.jsp";
-	final String VUE = "/WEB-INF/recapCommande.jsp";
-	final String ATT_BEAN_COMMANDE = "order";
+	final String VUE_ERROR = "/WEB-INF/order.jsp";
+	final String VUE = "/WEB-INF/recapOrder.jsp";
+	final String ATT_BEAN_ORDER = "order";
 	final String ATT_BEAN_CLIENT = "client";
 	final String ATT_BEAN_FORM_ORDER = "formOrder";
 	final String ATT_BEAN_FORM_CLIENT = "formClient";
@@ -41,16 +41,16 @@ public class ControllerCommande extends HttpServlet {
             throws ServletException, IOException {
     	
     	Client client = new Client();
-    	Commande commande = new Commande();
+    	Commande order = new Commande();
     	ClientForm clientForm = new ClientForm();
     	CommandForm commandForm = new CommandForm();
     	
-    	commande = commandForm.commandeSaving(request);
+    	order = commandForm.commandeSaving(request);
     	client = clientForm.clientSaving(request);
         
-    	commande.setClient(client);
+    	order.setClient(client);
     	
-    	request.setAttribute(ATT_BEAN_COMMANDE, commande);
+    	request.setAttribute(ATT_BEAN_ORDER, order);
     	request.setAttribute(ATT_BEAN_CLIENT, client);
     	request.setAttribute(ATT_BEAN_FORM_CLIENT, clientForm);
     	request.setAttribute(ATT_BEAN_FORM_ORDER, commandForm);
