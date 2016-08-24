@@ -18,5 +18,7 @@
 	<input type="submit" value="Connexion" class="sansLabel" /> 
 	<br />
 
-	<p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
+	<p class="error">${formConnection.result}</p>
+	<br/>
+	<c:out value="${sessionScope.userSession.email}"></c:out>
 </fieldset>

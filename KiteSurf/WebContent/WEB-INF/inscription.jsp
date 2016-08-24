@@ -7,6 +7,19 @@
 <title>Inscription</title>
 </head>
 <body>
-
+	<span class="success"><c:out value="${formConnection.result }"></c:out></span>
+	
+	<div class = content>
+		
+		<p>Vous êtes connecté avec l'utilisateur <c:out value="${sessionScope.userSession.email}"></c:out></p>
+		
+		<form method="post" action="disconnection">
+		
+			<input type="submit" value="Deconnexion" class="sansLabel" />
+			
+		</form>
+	
+	</div>
+	
 </body>
 </html>
