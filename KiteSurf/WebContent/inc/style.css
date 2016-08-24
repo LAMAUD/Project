@@ -1,0 +1,27 @@
+input {
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 20px;
+}
+label {
+    display: inline-block;
+    width: 30%;
+}
+
+fieldset {
+	width: 50%;
+}
+
+form {
+    text-align: -webkit-center;
+    
+    vertical-align: middle; 
+}
+
+form .error {
+    color: #900;
+}
+
+form .succes {
+    color: rgb(0,253,54);
+}
