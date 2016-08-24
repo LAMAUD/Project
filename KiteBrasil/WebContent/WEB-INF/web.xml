@@ -52,6 +52,26 @@
 		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
 	
+		<servlet>
+		<servlet-name>Connection</servlet-name>
+		<servlet-class>fr.cla.servlets.ConnectionController</servlet-class>
+	</servlet>
 
+	<servlet-mapping>
+		<servlet-name>Connection</servlet-name>
+		<url-pattern>/connection</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Disconnection</servlet-name>
+		<servlet-class>fr.cla.servlets.ControllerDisconnection</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Disconnection</servlet-name>
+		<url-pattern>/disconnection</url-pattern>
+	</servlet-mapping>
+	
 
 </web-app>

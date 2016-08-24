@@ -7,6 +7,9 @@
   <li><form name="monForm2" method="post" action="creationCommande">
   <a href="#" onclick="GoGo()">Save Order</a>
   </form></li>
+  <li><form name="boum" method="post" action="disconnection">
+  <a href="#" onclick="disco()">Deconnexion</a>
+  </form></li>
 </ul>
 
 
@@ -19,5 +22,10 @@ document.monForm.submit();
 function GoGo()
 {
 document.monForm2.submit();
+}
+
+function disco()
+{
+document.boum.submit();
 }
 </script>
