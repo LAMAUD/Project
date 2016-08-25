@@ -14,7 +14,7 @@ import fr.cla.service.ConnectionForm;
 public class ConnectionController extends HttpServlet {
 
     private final String      VUE                       = "/KiteBrasil/home";
-    private final String      VUE_ERROR                 = "/connection.jsp";
+    private final String      VUE_ERROR                 = "/WEB-INF/connection.jsp";
     private final String      ATT_FORMULAIRE_CONNECTION = "formConnection";
     private final String      ATT_USER                  = "user";
     private final String      ATT_USER_SESSION          = "userSession";
@@ -46,7 +46,7 @@ public class ConnectionController extends HttpServlet {
 
         if ( formConnection.getErrors().isEmpty() ) {
             session.setAttribute( ATT_USER_SESSION, user );
-            response.sendRedirect(VUE);
+            response.sendRedirect( VUE );
         }
         else {
             session.setAttribute( ATT_USER_SESSION, null );

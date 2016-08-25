@@ -49,6 +49,16 @@
 		<url-pattern>/disconnection</url-pattern>
 	</servlet-mapping>
 	
+		<servlet>
+		<servlet-name>Restriction</servlet-name>
+		<servlet-class>fr.cla.controller.Restriction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Restriction</servlet-name>
+		<url-pattern>/restriction</url-pattern>
+	</servlet-mapping>
+	
 	
 	
 </web-app>

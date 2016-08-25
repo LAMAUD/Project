@@ -52,7 +52,7 @@
 		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
 	
-		<servlet>
+	<servlet>
 		<servlet-name>Connection</servlet-name>
 		<servlet-class>fr.cla.servlets.ConnectionController</servlet-class>
 	</servlet>
@@ -71,6 +71,16 @@
 	<servlet-mapping>
 		<servlet-name>Disconnection</servlet-name>
 		<url-pattern>/disconnection</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>InitController</servlet-name>
+		<servlet-class>fr.cla.servlets.InitController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InitController</servlet-name>
+		<url-pattern>/init</url-pattern>
 	</servlet-mapping>
 	
 
