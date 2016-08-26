@@ -6,6 +6,10 @@
         <meta charset="utf-8" />
         <title>Connexion</title>
         <link type="text/css" rel="stylesheet" href="inc/style.css" />
+
+
+		
+
     </head>
 <body>
     
@@ -13,5 +17,6 @@
         <c:import url="/inc/template/signIn.jsp"></c:import>     
     </form>
     
+     
 </body>
 </html>

@@ -5,7 +5,10 @@
     <head>
         <meta charset="utf-8" />
         <title>Création d'un client</title>
-        <link type="text/css" rel="stylesheet" href="inc/style.css" />
+<!--         <link type="text/css" rel="stylesheet" href="inc/style.css" /> -->
+        	  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="inc/CSS/materialize.css"  media="screen,projection"/>
     </head>
     <body>
     
