@@ -19,7 +19,7 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><form name="monForm" method="post" action="creationClient"><a href="#" onclick="Go()">Save Client</a></form></li>
         <li><form name="monForm2" method="post" action="creationCommande"><a href="#" onclick="GoGo()">Save Order</a></form></li>
-        <li><form name="listClient" method="post" action="listclient"><a href="#" onclick="listClient()">Lister Clients </a></form></li>
+        <li><form name="zou" method="post" action="listerClientController"><a href="#" onclick="zou()">Lister Clients </a></form></li>
         <li><form name="boum" method="post" action="disconnection"><a href="#" onclick="disco()">Deconnexion </a></form></li>
       </ul>
     </div>
@@ -43,8 +43,8 @@ function disco()
 document.boum.submit();
 }
 
-function listClient()
+function zou()
 {
-document.listClient.submit();
+document.zou.submit();
 }
 </script>

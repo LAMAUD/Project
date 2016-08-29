@@ -80,7 +80,7 @@
 
 	<servlet-mapping>
 		<servlet-name>ListerClientController</servlet-name>
-		<url-pattern>/listclient</url-pattern>
+		<url-pattern>/listerClientController</url-pattern>
 	</servlet-mapping>
 	
 	<filter>
