@@ -15,7 +15,7 @@
 
 <body>
 
-<%-- 	<c:import url="/inc/template/templateMenu.jsp"/> --%>
+	<c:import url="/inc/template/templateMenu.jsp"/>
 	
 	  <div id="index-banner" class="parallax-container">
     	<div class="section no-pad-bot">

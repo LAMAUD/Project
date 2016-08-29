@@ -11,7 +11,7 @@
 	<br /> 
 	
 	<label	for="motdepasse">Mot de passe <span class="requis">*</span></label> 
-	<input	type="password" id="motdepasse" name="motdepasse" value="${user.pass }" size="20"maxlength="20" /> 
+	<input	type="password" id="motdepasse" name="motdepasse" value="${user.password }" size="20"maxlength="20" /> 
 	<span class="erreur">${formConnection.errors['password']}</span>
 	<br /> 
 	

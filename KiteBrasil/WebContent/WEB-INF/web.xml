@@ -73,15 +73,25 @@
 		<url-pattern>/disconnection</url-pattern>
 	</servlet-mapping>
 	
-		<servlet>
-		<servlet-name>InitController</servlet-name>
-		<servlet-class>fr.cla.servlets.InitController</servlet-class>
+	<servlet>
+		<servlet-name>ListerClientController</servlet-name>
+		<servlet-class>fr.cla.servlets.ListerClientController</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>InitController</servlet-name>
-		<url-pattern>/init</url-pattern>
+		<servlet-name>ListerClientController</servlet-name>
+		<url-pattern>/listclient</url-pattern>
 	</servlet-mapping>
+	
+	<filter>
+        <filter-name>ConnexionFilter</filter-name>
+        <filter-class>fr.cla.filter.ConnexionFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ConnexionFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 	
 
 </web-app>
