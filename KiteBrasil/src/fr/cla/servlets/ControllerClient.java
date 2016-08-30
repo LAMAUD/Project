@@ -24,7 +24,7 @@ public class ControllerClient extends HttpServlet {
     final String              VUE_ERROR            = "/WEB-INF/client.jsp";
     final String              VUE                  = "/WEB-INF/recapClient.jsp";
     final String              ATT_BEAN_CLIENT      = "client";
-    final String              ATT_LIST_CLIENTS     = "listClients";
+    final String              ATT_LIST_CLIENTS     = "clients";
     final String              ATT_BEAN_FORM_CLIENT = "formClient";
 
     Map<String, String>       errors               = new HashMap<String, String>();
@@ -39,16 +39,14 @@ public class ControllerClient extends HttpServlet {
         HttpSession session = request.getSession();
 
         List<Client> clients = (List<Client>) session.getAttribute( ATT_LIST_CLIENTS );
-        clients.add( client );
-
-        session.setAttribute( ATT_LIST_CLIENTS, clients );
-
-        request.setAttribute( ATT_BEAN_CLIENT, client );
-        request.setAttribute( ATT_BEAN_FORM_CLIENT, form );
 
         if ( form.getErrors().isEmpty() ) {
-            this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+            clients.add( client );
+            this.getServletContext().getRequestDispatcher( VUE_ERROR ).forward( request, response );
         } else {
+            session.setAttribute( ATT_LIST_CLIENTS, clients );
+            request.setAttribute( ATT_BEAN_CLIENT, client );
+            request.setAttribute( ATT_BEAN_FORM_CLIENT, form );
             this.getServletContext().getRequestDispatcher( VUE_ERROR ).forward( request, response );
         }
 
@@ -56,7 +54,7 @@ public class ControllerClient extends HttpServlet {
 
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 
-        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+        this.getServletContext().getRequestDispatcher( VUE_ERROR ).forward( request, response );
 
     }
 }

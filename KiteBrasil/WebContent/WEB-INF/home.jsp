@@ -4,18 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<!-- <link rel="stylesheet" type="text/css" href="/KiteBrasil/inc/style.css"> -->
+
 <title>Kite Surf</title>
 
-	  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="inc/CSS/materialize.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="inc/CSS/ajout.css"/>
+<!-- 	  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+      
+<link type="text/css" rel="stylesheet" href="inc/CSS/materialize.css"  media="screen,projection"/>
+      
 </head>
 
 <body>
 
-	<c:import url="/inc/template/templateMenu.jsp"/>
+	<%@include file="/inc/template/templateMenu.jsp"%>
 	
 	  <div id="index-banner" class="parallax-container">
     	<div class="section no-pad-bot">

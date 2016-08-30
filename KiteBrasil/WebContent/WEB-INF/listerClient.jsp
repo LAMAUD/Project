@@ -5,20 +5,39 @@
     <head>
         <meta charset="utf-8" />
         <title>Liste d'un client</title>
-
+		<link type="text/css" rel="stylesheet" href="inc/CSS/materialize.css"  media="screen,projection"/>
       
     </head>
     <body>
     
 <c:import url="/inc/template/templateMenu.jsp" />
 
-	<c:forEach var="client" items="${sessionScope.clients}" >
-			Nom : <c:out value="${client.getNom()}" /> <br/>
-			Prenom : <c:out value="${client.getPrenom()}" /> <br/> 
-			Adresse : <c:out value="${client.getAdresse()}" /> <br/>
-			Tel : <c:out value="${client.getTelNumber()}" /> <br/>
-			Mail : <c:out value="${client.getMail()}" /> <br/>
-			<br/>
-		</c:forEach>
+	<table>
+        <thead>
+          <tr>
+              <th data-field="name">Name</th>
+              <th data-field="firstname">Firstname</th>
+              <th data-field="adresse">Adresse</th>
+              <th data-field="Telephone">Telephone</th>
+              <th data-field="mail">Mail</th>
+          </tr>
+        </thead>
+		<tbody>
+			<c:forEach var="client" items="${sessionScope.clients}" >
+				<tr>
+					<td><c:out value="${client.getNom()}" /></td>
+					<td><c:out value="${client.getPrenom()}" /></td>
+					<td><c:out value="${client.getAdresse()}" /></td>
+					<td><c:out value="${client.getTelNumber()}" /></td>
+					<td><c:out value="${client.getMail()}" /></td>
+				</tr>
+			
+			</c:forEach>
+		</tbody>
+		
+		
+		
+		
+		
     </body>
 </html>

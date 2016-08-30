@@ -5,12 +5,12 @@
 	version="3.0">
 	<display-name>KiteBrasil</display-name>
 
-	<jsp-config>
-		<jsp-property-group>
-			<url-pattern>*.jsp</url-pattern>
-			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
-		</jsp-property-group>
-	</jsp-config>
+<!-- 	<jsp-config> -->
+<!-- 		<jsp-property-group> -->
+<!-- 			<url-pattern>*.jsp</url-pattern> -->
+<!-- 			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude> -->
+<!-- 		</jsp-property-group> -->
+<!-- 	</jsp-config> -->
 
 	<servlet>
 		<servlet-name>ControllerClient</servlet-name>
@@ -83,6 +83,16 @@
 		<url-pattern>/listerClientController</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>ListerCommandeController</servlet-name>
+		<servlet-class>fr.cla.servlets.ListerCommandeController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ListerCommandeController</servlet-name>
+		<url-pattern>/listerCommande</url-pattern>
+	</servlet-mapping>
+	
 	<filter>
         <filter-name>ConnexionFilter</filter-name>
         <filter-class>fr.cla.filter.ConnexionFilter</filter-class>
@@ -93,5 +103,21 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 	
+	<filter>
+    	<filter-name>Set Character Encoding</filter-name>
+   		<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+    	<init-param>
+        	<param-name>encoding</param-name>
+        	<param-value>UTF-8</param-value>
+    	</init-param>
+    	<init-param>
+        	<param-name>ignore</param-name>
+        	<param-value>false</param-value>
+   		</init-param>
+	</filter>
+	<filter-mapping>
+    	<filter-name>Set Character Encoding</filter-name>
+    	<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 </web-app>

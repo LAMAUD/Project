@@ -16,17 +16,19 @@ import fr.cla.service.ConnectionForm;
 
 public class ConnectionController extends HttpServlet {
 
-    private final String      VUE                       = "/KiteBrasil/home";
+    private final String      VUE                       = "/home";
     private final String      VUE_ERROR                 = "/WEB-INF/connection.jsp";
     private final String      ATT_FORMULAIRE_CONNECTION = "formConnection";
     private final String      ATT_USER                  = "user";
     private final String      ATT_USER_SESSION          = "userSession";
-    final String              ATT_LIST_CLIENTS          = "listClients";
+    final String              ATT_LIST_CLIENTS          = "clients";
+    final String              ATT_LIST_COMMANDES        = "commandes";
     /**
      * 
      */
 
     List<Client>              clients                   = new ArrayList<Client>();
+    List<Client>              commandes                 = new ArrayList<Client>();
 
     private static final long serialVersionUID          = -351964327224457939L;
 
@@ -48,13 +50,14 @@ public class ConnectionController extends HttpServlet {
 
         user = formConnection.connectionService( request );
 
+        session.setAttribute( ATT_LIST_COMMANDES, commandes );
         session.setAttribute( ATT_LIST_CLIENTS, clients );
         request.setAttribute( ATT_FORMULAIRE_CONNECTION, formConnection );
         request.setAttribute( ATT_USER, user );
 
         if ( formConnection.getErrors().isEmpty() ) {
             session.setAttribute( ATT_USER_SESSION, user );
-            response.sendRedirect( VUE );
+            this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
         }
         else {
             session.setAttribute( ATT_USER_SESSION, null );

@@ -1,5 +1,7 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <fieldset>
 	<legend>Informations client</legend>
+	
 
 	<label for="nomClient">Nom <span class="requis">*</span></label>
 	 <input	type="text" id="nomClient" name="nomClient" value="<c:out value="${client.nom}" />" size="20" maxlength="20" />
