@@ -34,7 +34,7 @@ public class ConnexionFilter implements Filter {
 
         // Autoriser l'accès au dossier /inc
         String chemin = request.getRequestURI().substring( request.getContextPath().length() );
-        if ( chemin.startsWith( "/inc" ) ) {
+        if ( chemin.startsWith( "/inc" ) || chemin.startsWith( "/inscription" ) ) {
             chain.doFilter( request, response );
             return;
         }

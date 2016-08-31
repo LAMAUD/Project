@@ -21,7 +21,7 @@
 
 			<div class="container">
 				<div class="col l12">
-					<select id="clientiz" name="clientiz">
+					<select id="clientiz" name="clientiz" onclick="removeField()">
 						<c:forEach var="client" items="${sessionScope.clients}">
 							<option value="${client.nom}">${client.nom}</option>
 						</c:forEach>

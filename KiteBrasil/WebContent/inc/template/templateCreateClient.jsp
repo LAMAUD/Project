@@ -13,7 +13,7 @@
 	 <br />
 	 
 	 <label for="adresseClient">Adresse	de livraison <span class="requis">*</span> </label> 
-	 <input type="text" id="adresseClient" name="adresseClient" value="<c:out value="${client.adresse}" />"	size="20" maxlength="20" />
+	 <input type="text" id="adresseClient" name="adresseClient" value="<c:out value="${client.adresse}" />"	size="20" maxlength="100" />
 	 <span class = "error" > <c:out value="${formClient.errors.adr}"></c:out></span>
 	 <br />
 	 

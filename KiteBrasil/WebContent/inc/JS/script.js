@@ -9,3 +9,10 @@ $(document).ready(function(){
 $(document).ready(function() {
     $('select').material_select();
 });
+
+
+function removeField()
+{
+	obj=document.getElementById('montantCommande');
+	obj.value="";
+}

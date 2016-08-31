@@ -93,6 +93,26 @@
 		<url-pattern>/listerCommande</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>SuppressionClient</servlet-name>
+		<servlet-class>fr.cla.servlets.SuppressionClient</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SuppressionClient</servlet-name>
+		<url-pattern>/suppressionClient</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Inscription</servlet-name>
+		<servlet-class>fr.cla.servlets.Inscription</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Inscription</servlet-name>
+		<url-pattern>/inscription</url-pattern>
+	</servlet-mapping>
+	
 	<filter>
         <filter-name>ConnexionFilter</filter-name>
         <filter-class>fr.cla.filter.ConnexionFilter</filter-class>

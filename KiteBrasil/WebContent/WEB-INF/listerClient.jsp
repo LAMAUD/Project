@@ -20,6 +20,7 @@
               <th data-field="adresse">Adresse</th>
               <th data-field="Telephone">Telephone</th>
               <th data-field="mail">Mail</th>
+              <th data-field="delete">Delete</th>
           </tr>
         </thead>
 		<tbody>
@@ -30,6 +31,11 @@
 					<td><c:out value="${client.getAdresse()}" /></td>
 					<td><c:out value="${client.getTelNumber()}" /></td>
 					<td><c:out value="${client.getMail()}" /></td>
+					<td class="action">
+                        <a href="<c:url value="/suppressionClient"><c:param name="nomClient" value="${ client.nom }" /></c:url>">
+                            <img src="<c:url value="/inc/supprimer.png"/>" alt="Supprimer" />
+                        </a>
+                    </td>
 				</tr>
 			
 			</c:forEach>
