@@ -8,7 +8,7 @@
         <link type="text/css" rel="stylesheet" href="inc/CSS/materialize.css"  media="screen,projection"/>
     </head>
     <body>
-        <form action="<c:url value="/upload" />" method="post" enctype="multipart/form-data">
+        <form action="<c:url value="/inscription" />" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>Envoi de fichier</legend>
 

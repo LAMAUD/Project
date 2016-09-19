@@ -33,6 +33,7 @@ public class UploadForm {
 
         fichier.setDescription( description );
         fichier.setNom( nomFichier );
+        fichier.setPart( part );
 
         try {
             ValidationFile( fichier );
@@ -58,7 +59,7 @@ public class UploadForm {
 
     public void ValidationFile( Fichier fichier ) throws Exception {
 
-        if ( fichier.getDescription() != null && fichier.getNom() != null ) {
+        if ( fichier.getDescription() != null && fichier.getNom() != null && !fichier.getNom().isEmpty() ) {
 
         }
         else {

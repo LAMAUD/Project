@@ -2,6 +2,8 @@ package fr.cla.pojo;
 
 import java.io.Serializable;
 
+import javax.servlet.http.Part;
+
 public class Fichier implements Serializable {
 
     /**
@@ -11,6 +13,7 @@ public class Fichier implements Serializable {
 
     private String            description;
     private String            nom;
+    private Part              part;
 
     public String getDescription() {
         return description;
@@ -26,6 +29,14 @@ public class Fichier implements Serializable {
 
     public void setNom( String nom ) {
         this.nom = nom;
+    }
+
+    public Part getPart() {
+        return part;
+    }
+
+    public void setPart( Part part ) {
+        this.part = part;
     }
 
 }
