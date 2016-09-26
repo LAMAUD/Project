@@ -69,7 +69,15 @@
 		<url-pattern>/upload</url-pattern>
 	</servlet-mapping>
 	
-
+	<servlet>
+		<servlet-name>GestionBDDJDBC</servlet-name>
+		<servlet-class>fr.cla.controller.GestionJDBC</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>GestionBDDJDBC</servlet-name>
+		<url-pattern>/gestionBDD</url-pattern>
+	</servlet-mapping>
 	
 <!-- 	<filter> -->
 <!--         <filter-name>RestrictionFilter</filter-name> -->
