@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- déclaration du schéma, ici seulement beans -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+	<bean id="structurededonnees" class="fr.treeptik.model.StructureDeDonnees">
+
+		<!-- List *********************************************** -->
+		<property name="listEx">
+			<list>
+				<value>valeur1</value>
+				<value>valeur2</value>
+			</list>
+		</property>
+<!-- 		<property name="listOfBeans"> -->
+<!-- 			<list> -->
+<!-- 				<ref bean="bean1" /> -->
+<!-- 				<ref bean="bean2" /> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
+
+
+		<!-- définition explicite d'une List en tant que Bean -->
+		<!-- <util:list id="listBean" > -->
+		<!-- <value>valeur1</value> -->
+		<!-- <value>valeur2</value> -->
+		<!-- </util:list> -->
+
+
+		<!-- Définir l'implémentation à utiliser - Prendre la main sur Spring -->
+		<!-- <util:list id="listBean" list-class="java.util.ArrayList"/> -->
+
+		<!-- Set *********************************************** -->
+
+		<property name="setEx">
+			<set>
+				<value>valeur1</value>
+				<value>valeur2</value>
+			</set>
+		</property>
+
+		<!-- Définition explicite d'une Set en tant que Bean -->
+		<!-- Définir l'implémentation à utiliser - Prendre la main sur Spring -->
+		<!-- <util:set id="setBean" set-class="java.util.HashSet"> -->
+		<!-- <value>valeur1</value> -->
+		<!-- <value>valeur2</value> -->
+		<!-- </util:set> -->
+
+		<!-- Map *********************************************** -->
+
+		<property name="mapEx">
+			<map>
+				<entry key="cle1" value="valeur1" />
+				<entry key="cle2" value="valeur2" />
+			</map>
+		</property>
+		<!-- Définition explicite d'une Map en tant que Bean -->
+		<!-- Définir l'implémentation à utiliser - Prendre la main sur Spring -->
+		<!-- <util:map id="mapBean" map-class="java.util.HashMap"> -->
+		<!-- <entry key="cle1" value="valeur1" /> -->
+		<!-- <entry key="cle2" value="valeur2" /> -->
+		<!-- </util:map> -->
+
+
+
+		<!-- Properties *********************************************** -->
+		<property name="propEx">
+			<props>
+				<prop key="cle1">valeur1</prop>
+				<prop key="cle2">valeur2</prop>
+			</props>
+		</property>
+
+		<!-- définition explicite d'une Properties en tant que Bean -->
+		<!-- <util:properties id="propsBean"> -->
+		<!-- <prop key="cle1">valeur1</prop> -->
+		<!-- <prop key="cle2">valeur2</prop> -->
+		<!-- </util:properties> -->
+
+	</bean>
+</beans>
+	
+	

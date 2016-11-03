@@ -1,0 +1,14 @@
+fr/treeptik/dao/RoleDAO.class
+fr/treeptik/service/RoleService.class
+fr/treeptik/controller/ClientController.class
+fr/treeptik/exception/DAOException.class
+fr/treeptik/model/Role.class
+fr/treeptik/model/Client.class
+fr/treeptik/exception/ServiceException.class
+fr/treeptik/dao/impl/ClientJPADAO.class
+fr/treeptik/service/ClientService.class
+fr/treeptik/dao/ClientDAO.class
+fr/treeptik/validator/ClientValidator.class
+fr/treeptik/conf/ApplicationConfiguration.class
+fr/treeptik/dao/impl/RoleJPADAO.class
+fr/treeptik/service/ClientServiceImpl.class

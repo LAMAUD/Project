@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- déclaration du schéma, ici seulement beans -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="monBean2" class="fr.treeptik.model.UnBean2">
+		<property name="chaine" value="valeur" />
+		<property name="entier" value="10" />
+		<property name="reel" value="10.5" />
+		<property name="booleen" value="true" />
+		<property name="caractere" value="a" />
+		<property name="localisation" value="fr_FR" />
+		<property name="url" value="http://tudu.sf.net" />
+		<property name="fichier" value="file:c:\temp\test.txt" />
+		<property name="tab2bytes" value="valeur" />
+		<property name="tab2chaines" value="valeur1,valeur2" />
+		<property name="date" value="04/09/2014 14:00:01" /> <!-- MM/dd/yyyy -->
+		<!-- <property name="date" value="04-04-2014" /> -->
+	</bean>
+
+
+
+</beans>
+

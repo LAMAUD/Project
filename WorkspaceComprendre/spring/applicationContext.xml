@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util-2.0.xsd
+	">
+
+	<!-- Déclaration de l'utilisation du système d'annotation -->
+	<context:annotation-config />
+	<!-- ou <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" 
+		/> -->
+
+	<!-- <context:property-placeholder location="file:config.properties" /> -->
+
+	<context:component-scan base-package="fr.treeptik" />
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="fr.treeptik.i18n.messages"></property>
+	</bean>
+
+
+	<!-- Définition des auteurs -->
+	<!-- <bean id="monAuteur1" class="fr.treeptik.model.Auteur" p:id="1" -->
+	<!-- p:name="Victor Hugo" /> -->
+
+	<!-- Définition des articles -->
+	<!-- <bean id="monArticle1" class="fr.treeptik.model.Article" -->
+	<!-- p:auteur-ref="monAuteur1"> -->
+	<!-- <property name="id" value="1" /> -->
+	<!-- <property name="title" value="Mon Article Déclaré En XML" /> -->
+	<!-- </bean> -->
+
+	<!-- <util:list id="lstCommentaires1"> -->
+	<!-- <ref bean="monCommentaire1" /> -->
+	<!-- <ref bean="monCommentaire2" /> -->
+	<!-- </util:list> -->
+
+	<!-- <util:list id="lstCommentaires2"> -->
+	<!-- <ref bean="monCommentaire1" /> -->
+	<!-- <ref bean="monCommentaire3" /> -->
+	<!-- </util:list> -->
+
+	<!-- Définition des commentaires -->
+	<!-- <bean id="monCommentaire1" class="fr.treeptik.model.Commentaire"> -->
+	<!-- <constructor-arg value="1" /> -->
+	<!-- <constructor-arg value="Mon premier commentaire" /> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="monCommentaire2" class="fr.treeptik.model.Commentaire"> -->
+	<!-- <constructor-arg value="2" /> -->
+	<!-- <constructor-arg value="Trololooo" /> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="monCommentaire3" class="fr.treeptik.model.Commentaire"> -->
+	<!-- <constructor-arg value="3" /> -->
+	<!-- <constructor-arg value="HACK !!!" /> -->
+	<!-- </bean> -->
+
+</beans>
