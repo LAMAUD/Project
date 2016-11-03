@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!-- Injection en deux temps -->
+
+	<!-- Déclaration de userDao collaborateur de userManager -->
+	<bean id="userDAO1" class="fr.treeptik.dao.jpa.UserDAOJpa" />
+
+	<bean id="userManager1" class="fr.treeptik.service.impl.UserManagerImpl">
+<!-- 		utilisation l’attribut ref pour faire référence à notre DAO -->
+		<property  name="userDAOJpa" ref="userDAO1" />
+	</bean>
+
+
+	<!-- Injection directe  - Bean interne -->
+
+	<bean id="userManager2" class="fr.treeptik.service.impl.UserManagerImpl">
+		<property name="userDAOJpa">
+<!-- 		 pas utile de nommer un Bean interne Anonyme -->
+			<bean class="fr.treeptik.dao.jpa.UserDAOJpa" />
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- déclaration du schéma, ici seulement beans -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="monArticle1" class="fr.treeptik.model.Article">
+		<property name="title" value="Mon Article Déclaré En XML" />
+	</bean>
+	<bean id="monArticle2" class="fr.treeptik.model.Article">
+		<property name="title" value="Mon 2e Article Déclaré En XML" />
+	</bean>
+
+	<bean id="monBlog" class="fr.treeptik.model.Blog">
+		<property name="lstArticles">
+			<list>
+				<ref bean="monArticle1" />
+				<ref bean="monArticle2" />
+			</list>
+		</property>
+	</bean>
+
+
+</beans>
+	

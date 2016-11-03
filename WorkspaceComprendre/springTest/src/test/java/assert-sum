@@ -1,0 +1,20 @@
+
+
+Pour les booléens, les assertions suivantes sont disponibles : 
+
+	assertFalse (boolean obtenu)
+	assertTrue (boolean obtenu)
+
+Pour les objets, les assertions suivantes sont disponibles 
+
+	assertEquals (Object attendu,Object obtenu) : égalité de contenu
+    assertSame (Object attendu,Object obtenu) : référence à un seul et même objet
+	assertNotSame (Object attendu,Object obtenu)
+	assertNull (Object obtenu)
+	assertNotNull (Object obtenu)
+
+Egalité de l'objet Pour les différents types primitifs avec delta
+	assertEquals(Type valeurAttendu, Type valeurObtenu, Type deltaAccepte)
+	 
+	
+	
