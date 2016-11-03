@@ -8,12 +8,16 @@ import fr.cla.DAO.GenericDAO;
 public class GenericDAOImpl<T> implements GenericDAO<T> {
 
     @PersistenceContext
-    EntityManager    entityManager;
+    private EntityManager entityManager;
 
-    private Class<T> type;
+    private Class<T>      type;
 
     public void save( T t ) {
         entityManager.persist( t );
+    }
+
+    public GenericDAOImpl() {
+        super();
     }
 
 }

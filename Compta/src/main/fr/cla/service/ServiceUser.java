@@ -1,6 +1,6 @@
 package fr.cla.service;
 
-import org.springframework.transaction.annotation.Transactional;
+import javax.transaction.Transactional;
 
 import fr.cla.pojo.User;
 
