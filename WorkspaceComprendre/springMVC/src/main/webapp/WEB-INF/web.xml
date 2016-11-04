@@ -6,9 +6,9 @@
 
 	<display-name>spring-mvc</display-name>
 
-	<welcome-file-list>
-		<welcome-file>/pages/login.jsp</welcome-file>
-	</welcome-file-list>
+<!-- 	<welcome-file-list> -->
+<!-- 		<welcome-file>/pages/login.jsp</welcome-file> -->
+<!-- 	</welcome-file-list> -->
 
 	<!-- Les servlet répondent à des requêtes de type HTTP et qui permettenr 
 		de retourner dynamiquement des pages HTML. -->
@@ -35,23 +35,23 @@
 	</listener>
 
 
-	<filter>
-		<filter-name>localizationFilter</filter-name>
-		<filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>localizationFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+<!-- 	<filter> -->
+<!-- 		<filter-name>localizationFilter</filter-name> -->
+<!-- 		<filter-class>org.springframework.web.filter.RequestContextFilter</filter-class> -->
+<!-- 	</filter> -->
+<!-- 	<filter-mapping> -->
+<!-- 		<filter-name>localizationFilter</filter-name> -->
+<!-- 		<url-pattern>/*</url-pattern> -->
+<!-- 	</filter-mapping> -->
 
 	<!-- filtre mise en place pour la restriction d'accès -->
-	<filter>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+<!-- 	<filter> -->
+<!-- 		<filter-name>springSecurityFilterChain</filter-name> -->
+<!-- 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class> -->
+<!-- 	</filter> -->
+<!-- 	<filter-mapping> -->
+<!-- 		<filter-name>springSecurityFilterChain</filter-name> -->
+<!-- 		<url-pattern>/*</url-pattern> -->
+<!-- 	</filter-mapping> -->
 
 </web-app>

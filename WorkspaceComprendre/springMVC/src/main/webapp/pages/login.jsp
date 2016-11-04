@@ -20,7 +20,7 @@
 
 <body>
 	<h1 id="banner">Login to Security Demo</h1>
-	<form action="j_spring_security_check" method="POST">
+	<form action="client.jsp" method="POST">
 		<div class="form-group">
 			<label>Email</label>
 			<input type="text" placeholder="test@example.com" class="form-control" name="j_username">

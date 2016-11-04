@@ -36,17 +36,17 @@
 				<div class="panel-body">
 					<c:url var="createClient" value="/client/save.do" />
 					<form:form action="${createClient}" commandName="client"
-						method="POST">
-						<%-- <form:errors path="*" cssClass="alert alert-danger" element="div"></form:errors> --%>
+						method="POST"> 
+						<form:errors path="*" cssClass="alert alert-danger" element="div"></form:errors>
 						<form:hidden path="id" />
 						<div class="form-group">
 							<label for="nom"> <spring:message code="label.name"
 									text="default text" />
 							</label>
 							<form:input type="text" class="form-control" id="nom" path="nom"
-								placeholder="nom" />
-							<form:errors path="nom" class="alert alert-danger"
-								element="div" />
+ 								placeholder="nom" /> 
+ 							<form:errors path="nom" class="alert alert-danger" 
+								element="div" /> 
 						</div>
 						
 						<div class="form-group">
@@ -59,17 +59,17 @@
 
 						<div class="form-group">
 							<label for="password"> <spring:message
-									code="label.password" text="default text" />
+ 									code="label.password" text="default text" /> 
 							</label>
 							<form:input type="password" class="form-control" id="password"
-								path="password" placeholder="password" />
-							<form:errors path="password" class="alert alert-danger"
-								element="div" />
+ 								path="password" placeholder="password" /> 
+ 							<form:errors path="password" class="alert alert-danger" 
+ 								element="div" /> 
 						</div>
 
 						<div class="form-group">
 							<label for="role"> <spring:message code="choose.role"
-									text="default text" />
+ 									text="default text" /> 
 							</label>
 							<form:select id="role" name="role" path="role.id">
 								<form:option value="" label="--- Choisir un Role ---" />
